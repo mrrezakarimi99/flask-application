@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------ Header ------------------------------ */
+.menu-header{
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.menu-header .logo {
+    float: left;
+    font-size: 25px;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu-header .menu-items {
+    float: right;
+}
+.menu-header .menu-items a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu-header .menu-items a:hover {
+    border-bottom: 1px solid #f2f2f2;
+    border-radius: 5px;
+}
+.menu-header .menu-items a.active {
+    border-bottom: 1px solid #f2f2f2;
+    border-radius: 5px;
+}
+.menu-header .menu-items .login-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+/* ------------------------------ Header ------------------------------ */
+
+/* ------------------------------ Login and Register Modal ------------------------------ */
+#loginModal a ,#registerModal a{
+    color: #333;
+    text-decoration: revert;
+}
+#loginModal input[type=text],
+#loginModal input[type=password],
+#forgetPassword input[type=email],
+#registerModal input[type=text],
+#registerModal input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+#loginModal .submit-login ,
+#forgetPassword .submit-forget-password ,
+#registerModal .submit-register{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+#loginModal .submit-login:hover,
+#forgetPassword .submit-forget-password:hover,
+#registerModal .submit-register:hover{
+    opacity: 0.8;
+  opacity: 0.8;
+}
+#loginModal .img-container-modal,
+#forgetPassword .img-container-modal,
+#registerModal .img-container-modal{
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+#loginModal .img-container-modal img,
+#forgetPassword .img-container-modal img,
+#registerModal .img-container-modal img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+#loginModal .close,
+#forgetPassword .close,
+#registerModal .close{
+  float: right;
+  padding-top: 16px;
+}
+.modal-login,
+.modal-forget-password,
+.modal-register{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+#loginModal .modal-login-content,
+#forgetPassword .modal-forget-password-content,
+#registerModal .modal-register-content{
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 5px;
+}
+#loginModal .close-login,
+#forgetPassword .close-forget-password,
+#registerModal .close-register{
+  position: absolute;
+  right: 26%;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+#loginModal .close-login:hover,
+#loginModal .close-login:focus,
+#forgetPassword .close-forget-password:hover,
+#forgetPassword .close-forget-password:focus,
+#registerModal .close-register:hover,
+#registerModal .close-register:focus{
+  color: red;
+  cursor: pointer;
+}
+#loginModal .animate-login,
+#forgetPassword .animate-forget-password,
+#registerModal .animate-register{
+  -webkit-animation: animate-zoom 0.6s;
+  animation: animate-zoom 0.6s
+}
+#error-register{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+.error-login p{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+/* ------------------------------ Login and Register Modal ------------------------------ */
+
+
+
+@-webkit-keyframes animate-zoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animate-zoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+/* ------------------------------ End Login and Register Modal ------------------------------ */
+
+@media screen and (max-width: 300px) {
+}
